@@ -24,7 +24,7 @@
 <meta property="og:description" content="此法优点- -可以更改自己的blog主题且完全看不出自己的blog的基站是什么[由于大多数用户使用的都是windows系统，所以先给出windows的操作方法] 简介：GitHub Pages 和 Hexo &amp; 原理1.准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 1.3. 建立github账号及库2.本地安装 Hexo 博客程序 2.1. 安装 Hexo 2.2. Hexo 初">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-11T11:31:40.640Z">
-<meta property="article:modified_time" content="2021-02-11T14:41:26.200Z">
+<meta property="article:modified_time" content="2021-02-11T14:55:27.945Z">
 <meta property="article:author" content="kagaminejin">
 <meta name="twitter:card" content="summary">
   
@@ -99,13 +99,12 @@
 <p>#3.部署Hexo到GitHub Pages<br>首先安装 hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>然后修改 _ config.yml 文件末尾的Deployment部分,修改成如下：<br><a href="-">deploy:<br>  type: git<br>  repository: git@github.com:用户名/用户名.github.io.git<br>  branch: master</a></p>
 <p>之后的每一次更新都需要进行以下步骤<br><a href="-">更新完成后运行<br> hexo g<br>生成页面后<br> hexo d<br>将网站上传部署GitHub Pages.</a><br>这时访问我们的GitHub(域名 https://用户名.github.io )就可以看到Hexo网站了.</p>
 <p>#4.完成博客搭建<br>使用的是 GitHub 的子域名，即<a href="-">用户名.http://github.io </a>,我们可以为Hexo博客绑定自己的域名替换GitHub域名，更加个性化和专业，也利于SEO.<br>我们使用Namesilo进行注册，便宜好用没啥套路，使用优惠码<a href="-">okoff</a>优惠1$,.com 域名大概 50 块一年,在国内大概55r一年(阿里云什么的).</p>
-<p>#5.使用自己的博客<br>进入博客所在目录，右键打开Git Bash Here,创建博文：<br>hexo new “My New Post”<br>然后 source 文件夹中会出现一个My New Post.md文件，就可以使用Markdown编辑器在该文件中撰写文章了.<br>也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，同上写完后运行hexo g和hexo d发布.<br>[title: Hello World # 标题<br>date: 2019/3/26 hh:mm:ss # 时间<br>categories: # 分类</p>
+<p>#5.使用自己的博客<br>进入博客所在目录，右键打开Git Bash Here,创建博文：<br>hexo new “My New Post”<br>然后 source 文件夹中会出现一个My New Post.md文件，就可以使用Markdown编辑器在该文件中撰写文章了.<br>也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式<a href="-">Front-matter</a>即可，同上写完后运行<a href="-">hexo g</a>和<a href="">hexo d</a>发布.<br>[title: Hello World # 标题<br>date: 2019/3/26 hh:mm:ss # 时间<br>categories: # 分类</p>
 <ul>
 <li>Diary<br>tags: # 标签</li>
 <li>PS3</li>
-<li>Games](-)<br>网站设置包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _ config.yml 文件中，参考官方文档按需要编辑.<br>注意：冒号后要加一个空格!</li>
+<li>Games](-)<br>网站设置包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _ config.yml 文件中，参考官方文档按需要编辑.<br>注意：冒号后要加一个空格!<br>更换主题在<a href="www.hexo.io/themes">Hexo主题站</a>选择一个喜欢的主题，比如 NexT，进入网站目录打开Github下载主题到本地，将其移动到[E:\hexo\kagaminejin\themes],<br>然后修改 _ config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _ config.yml 替换为主题自带的，参考主题的文件夹名.）</li>
 </ul>
-<p>更换主题在<a href="www.hexo.io/themes">Hexo主题站</a>选择一个喜欢的主题，比如 NexT，进入网站目录打开Github下载主题到本地，将其移动到[E:\hexo\kagaminejin\themes],<br>然后修改 _ config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _ config.yml 替换为主题自带的，参考主题的文件夹名.）</p>
 <p>常用命令<br>hexo new “name”       # 新建文章<br>hexo new page “name”  # 新建页面<br>hexo g                # 生成页面<br>hexo d                # 部署<br>hexo g -d             # 生成页面并部署<br>hexo s                # 本地预览<br>hexo clean            # 清除缓存和已生成的静态文件<br>hexo help             # 帮助</p>
 <p>#6.可能你会发现你的rss没有使用过，可以参考我在制作过程中看到的修正方法：<br>“因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支<br>为保持一致性，可将本地git init的时候默认分支修改为main.<br>执行：<br> git –version  查看版本<br> git config –global init.defaultBranch main<br>git分支在2.28.0上，重新设置默认分支为main,<br>最后修改deploy那里的branch：将master改为main,<br>此方法用于解决本地搭好了主题，在GitHub上却没有变化的问题，亲测有效.</p>
 
