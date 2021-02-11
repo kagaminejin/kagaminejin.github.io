@@ -24,7 +24,7 @@
 <meta property="og:description" content="此法优点- -可以更改自己的blog主题且完全看不出自己的blog的基站是什么[由于大多数用户使用的都是windows系统，所以先给出windows的操作方法] 简介：GitHub Pages 和 Hexo &amp; 原理1.准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 1.3. 建立github账号及库2.本地安装 Hexo 博客程序 2.1. 安装 Hexo 2.2. Hexo 初">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-11T11:31:40.640Z">
-<meta property="article:modified_time" content="2021-02-11T14:56:28.271Z">
+<meta property="article:modified_time" content="2021-02-11T15:04:02.583Z">
 <meta property="article:author" content="kagaminejin">
 <meta name="twitter:card" content="summary">
   
@@ -92,21 +92,23 @@
       
         <p>此法优点- -可以更改自己的blog主题且完全看不出自己的blog的基站是什么<br>[由于大多数用户使用的都是windows系统，所以先给出windows的操作方法]</p>
 <p>简介：GitHub Pages 和 Hexo &amp; 原理<br>1.准备：环境搭建<br> 1.1. 注意事项<br> 1.2. 环境搭建<br> 1.3. 建立github账号及库<br>2.本地安装 Hexo 博客程序<br> 2.1. 安装 Hexo<br> 2.2. Hexo 初始化和本地预览<br>3.部署 Hexo 到 GitHub Pages<br>4.绑定域名（可选）<br>5.开始使用<br> 5.1. 发布文章<br> 5.2. 网站设置<br> 5.3. 更换主题<br> 5.4. 常用代码<br>6.常见问题</p>
-<p>步骤简述<br>#1.搭建环境<br>首先安装好必须的运行库，<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node.js</a>、<a target="_blank" rel="noopener" href="https://gitforwindows.org/">git</a>、<a target="_blank" rel="noopener" href="https://www.npmjs.com/get-npm">npm</a>, 然后在<a target="_blank" rel="noopener" href="https://github.com/">github</a> 上建立自己的账号<br>建立好自己的库（库名<a href="-">Repository name</a>注意为：github用户名.github.io；记得添加readme.md文件）<br><a href="-">建立好库之后，可以打开setting，可以看到Github Pages一栏，之后我们可以在Custom domain更改域名</a></p>
+<p>步骤简述<br>##1.搭建环境<br>首先安装好必须的运行库，<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node.js</a>、<a target="_blank" rel="noopener" href="https://gitforwindows.org/">git</a>、<a target="_blank" rel="noopener" href="https://www.npmjs.com/get-npm">npm</a>, 然后在<a target="_blank" rel="noopener" href="https://github.com/">github</a> 上建立自己的账号<br>建立好自己的库（库名<a href="-">Repository name</a>注意为：github用户名.github.io；记得添加readme.md文件）<br><a href="-">建立好库之后，可以打开setting，可以看到Github Pages一栏，之后我们可以在Custom domain更改域名</a></p>
 <p>注意：库名一定要是文中所述格式，否则之后的访问会失效！</p>
-<p>#2.本地安装新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog.打开该文件夹，右键-&gt;Git Bash Here.在git内使用 npm 一键安装 Hexo 博客程序：<br> $npm install -g hexo-cli<br> <a href="-">注意，可能界面会没有反应，因为下载速度非常缓慢！！！所以不需要担心，静静等待即可，如果过长时间无响应，请重新运行指令安装</a></p>
+<p>##2.本地安装新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog.打开该文件夹，右键-&gt;Git Bash Here.在git内使用 npm 一键安装 Hexo 博客程序：<br> $npm install -g hexo-cli<br> <a href="-">注意，可能界面会没有反应，因为下载速度非常缓慢！！！所以不需要担心，静静等待即可，如果过长时间无响应，请重新运行指令安装</a></p>
 <p>初始化并安装所需组件：<br><a href="-">打开刚才建立的Hexo-Blog，在文件管理器的地址栏（我的地址栏显示的是D:\hexo\kagaminejin\）输入cmd，然后回车，打开cmd命令</a><br> hexo init      # 初始化<br> npm install    # 安装组件<br>完成后依次输入下面命令，启动本地服务器进行预览：<br> hexo g   # 生成页面<br> hexo s -p 5555   # 启动预览<br>访问<a target="_blank" rel="noopener" href="http://localhost:5555/">http://localhost:5555</a> ,出现Hexo默认页面,本地博客安装成功！</p>
-<p>#3.部署Hexo到GitHub Pages<br>首先安装 hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>然后修改 _ config.yml 文件末尾的Deployment部分,修改成如下：<br><a href="-">deploy:<br>  type: git<br>  repository: git@github.com:用户名/用户名.github.io.git<br>  branch: master</a></p>
+<p>##3.部署Hexo到GitHub Pages<br>首先安装 hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>然后修改 _ config.yml 文件末尾的Deployment部分,修改成如下：<br><a href="-">deploy:<br>  type: git<br>  repository: git@github.com:用户名/用户名.github.io.git<br>  branch: master</a></p>
 <p>之后的每一次更新都需要进行以下步骤<br><a href="-">更新完成后运行<br> hexo g<br>生成页面后<br> hexo d<br>将网站上传部署GitHub Pages.</a><br>这时访问我们的GitHub(域名 https://用户名.github.io )就可以看到Hexo网站了.</p>
-<p>#4.完成博客搭建<br>使用的是 GitHub 的子域名，即<a href="-">用户名.http://github.io </a>,我们可以为Hexo博客绑定自己的域名替换GitHub域名，更加个性化和专业，也利于SEO.<br>我们使用Namesilo进行注册，便宜好用没啥套路，使用优惠码<a href="-">okoff</a>优惠1$,.com 域名大概 50 块一年,在国内大概55r一年(阿里云什么的).</p>
-<p>#5.使用自己的博客<br>进入博客所在目录，右键打开Git Bash Here,创建博文：<br>hexo new “My New Post”<br>然后 source 文件夹中会出现一个My New Post.md文件，就可以使用Markdown编辑器在该文件中撰写文章了.<br>也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式<a href="-">Front-matter</a>即可，同上写完后运行<a href="-">hexo g</a>和<a href="">hexo d</a>发布.<br>[title: Hello World # 标题<br>date: 2019/3/26 hh:mm:ss # 时间<br>categories: # 分类</p>
+<p>##4.完成博客搭建<br>使用的是 GitHub 的子域名，即<a href="-">用户名.http://github.io </a>,我们可以为Hexo博客绑定自己的域名替换GitHub域名，更加个性化和专业，也利于SEO.<br>我们使用Namesilo进行注册，便宜好用没啥套路，使用优惠码<a href="-">okoff</a>优惠1$,.com 域名大概 50 块一年,在国内大概55r一年(阿里云什么的).</p>
+<p>##5.使用自己的博客<br>进入博客所在目录，右键打开Git Bash Here,创建博文：<br>hexo new “My New Post”<br>然后 source 文件夹中会出现一个My New Post.md文件，就可以使用Markdown编辑器在该文件中撰写文章了.<br>也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式<a href="-">Front-matter</a>即可，同上写完后运行<a href="-">hexo g</a>和<a href="">hexo d</a>发布</p>
+<p>title: Hello World # 标题<br>date: 2019/3/26 hh:mm:ss # 时间<br>categories: # 分类</p>
 <ul>
 <li>Diary<br>tags: # 标签</li>
 <li>PS3</li>
-<li>Games](-)<br>网站设置包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _ config.yml 文件中，参考官方文档按需要编辑.<br>注意：冒号后要加一个空格!<br>更换主题在<a href="www.hexo.io/themes">Hexo主题站</a>选择一个喜欢的主题，比如 NexT，进入网站目录打开Github下载主题到本地，将其移动到[E:\hexo\kagaminejin\themes],<br>然后修改 _ config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _ config.yml 替换为主题自带的，参考主题的文件夹名.）</li>
+<li>Games</li>
 </ul>
+<p>网站设置包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _ config.yml 文件中，参考官方文档按需要编辑.<br>（注意：冒号后要加一个空格!）<br>更换主题在<a href="www.hexo.io/themes">Hexo主题站</a>选择一个喜欢的主题，比如 NexT，进入网站目录打开Github下载主题到本地，将其移动到[E:\hexo\kagaminejin\themes],<br>然后修改 _ config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _ config.yml 替换为主题自带的，参考主题的文件夹名.）</p>
 <p>常用命令<br>hexo new “name”       # 新建文章<br>hexo new page “name”  # 新建页面<br>hexo g                # 生成页面<br>hexo d                # 部署<br>hexo g -d             # 生成页面并部署<br>hexo s                # 本地预览<br>hexo clean            # 清除缓存和已生成的静态文件<br>hexo help             # 帮助</p>
-<p>#6.可能你会发现你的rss没有使用过，可以参考我在制作过程中看到的修正方法：<br>“因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支<br>为保持一致性，可将本地git init的时候默认分支修改为main.<br>执行：<br> git –version  查看版本<br> git config –global init.defaultBranch main<br>git分支在2.28.0上，重新设置默认分支为main,<br>最后修改deploy那里的branch：将master改为main,<br>此方法用于解决本地搭好了主题，在GitHub上却没有变化的问题，亲测有效.</p>
+<p>##6.可能你会发现你的rss没有使用过，可以参考我在制作过程中看到的修正方法：<br>“因为在2020年10月1日起，GitHub默认主分支从master更名为main，以上的提交方式会默认创建一个master分支<br>为保持一致性，可将本地git init的时候默认分支修改为main.<br>执行：<br> git –version  查看版本<br> git config –global init.defaultBranch main<br>git分支在2.28.0上，重新设置默认分支为main,<br>最后修改deploy那里的branch：将master改为main,<br>此方法用于解决本地搭好了主题，在GitHub上却没有变化的问题，亲测有效.</p>
 
       
     </div><!-- .entry-content -->
