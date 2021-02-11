@@ -113,7 +113,35 @@
 </ul>
 <h3 id="6-表格-1"><a href="#6-表格-1" class="headerlink" title="6.表格"></a><a id="C6">6.表格</a></h3><p>写法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 表头1|表头2|表头3|表头4</span><br><span class="line">|-| :- | :-: | -: |</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br></pre></td></tr></table></figure>
-<p>结果示例：<br>| 表头1|表头2|表头3|表头4<br>|-| :- | :-: | -: |<br>|默认左对齐|左对齐|居中对其|右对齐|<br>|默认左对齐|左对齐|居中对其|右对齐|<br>|默认左对齐|左对齐|居中对其|右对齐|</p>
+<p>结果示例：</p>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th align="left">表头2</th>
+<th align="center">表头3</th>
+<th align="right">表头4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+</tbody></table>
 <h3 id="7-插入图片-1"><a href="#7-插入图片-1" class="headerlink" title="7.插入图片"></a><a id="C7">7.插入图片</a></h3><p>1.将主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
 <p>2.在你的hexo目录下执行<code>npm install hexo-asset-image –save</code>，这是下载安装一个可以上传本地图片的插件</p>
 <p>3.等待一小段时间后，再运行<code>hexo n “xxxx”</code>来生成md博文时<br>/source/ _ posts文件夹内除了xxxx.md文件还有一个同名的文件夹(没有同名文件夹也可以自己新建)</p>
