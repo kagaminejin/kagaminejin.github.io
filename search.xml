@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Self-introduction of AmemiyaRuli</title>
-    <url>/2021/02/10/Personal%20Page/</url>
-    <content><![CDATA[<p>Master of a QQ chat bot- -雨宫琉璃<br>Project location @<a href="https://qm.qq.com/cgi-bin/qm/qr?k=2mL1YiLMzyu-eK2jnEemQSOMlGlbDUUS&noverify=0">雨宫琉璃</a></p>
-<p>Amateur painter,Modeler</p>
-<p>I’m new to git,in the future in the process of learning, please give more advice</p>
-<p>If there are errors, please point out,thank you</p>
-<p>My e-mail is <a href="mailto:&#x6f;&#115;&#99;&#x61;&#x72;&#95;&#x6f;&#x75;&#121;&#x61;&#110;&#x67;&#x2e;&#119;&#104;&#x40;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x6f;&#115;&#99;&#x61;&#x72;&#95;&#x6f;&#x75;&#121;&#x61;&#110;&#x67;&#x2e;&#119;&#104;&#x40;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> </p>
-<p>You may send mail if there are any questions</p>
-]]></content>
-  </entry>
-  <entry>
     <title>使用[github+hexo]建立个人博客</title>
     <url>/2021/02/11/%E4%BD%BF%E7%94%A8hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>此法优点- -可以更改自己的 blog 主题且完全看不出自己的 blog 的基站是什么<br><a href="/">由于大多数用户使用的都是 Windows 系统，所以先给出 Windows 的操作方法</a></p>
@@ -105,6 +94,17 @@
 <p>3.等待一小段时间后，再运行<code>hexo n “xxxx”</code>来生成md博文时<br>/source/ _ posts文件夹内除了xxxx.md文件还有一个同名的文件夹(没有同名文件夹也可以自己新建)</p>
 <p>4.最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：<br><code>![你想输入的替代文字](xxxx/图片名.jpg)</code><br><a href="/">注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径</a></p>
 <p>5.最后检查一遍，<code>hexo g</code>生成页面后，进入public\YYYY\MM\DD\index.html文件中查看相关字段，你会注意到，html标签内的语句是<code>&lt;img src=&quot;YYYY/MM/DD/xxxx/图片名.jpg&quot;&gt;</code>，而不是<code>&lt;img src=&quot;xxxx/图片名.jpg&gt;</code>。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Self-introduction of AmemiyaRuli</title>
+    <url>/2021/02/10/PersonalPage/</url>
+    <content><![CDATA[<p>Master of a QQ chat bot- -雨宫琉璃<br>Project location @<a href="https://qm.qq.com/cgi-bin/qm/qr?k=2mL1YiLMzyu-eK2jnEemQSOMlGlbDUUS&noverify=0">雨宫琉璃</a></p>
+<p>Amateur painter,Modeler</p>
+<p>I’m new to git,in the future in the process of learning, please give more advice</p>
+<p>If there are errors, please point out,thank you</p>
+<p>My e-mail is <a href="mailto:&#111;&#115;&#x63;&#97;&#x72;&#x5f;&#111;&#117;&#x79;&#x61;&#x6e;&#x67;&#46;&#x77;&#104;&#x40;&#x66;&#x6f;&#x78;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#111;&#115;&#x63;&#97;&#x72;&#x5f;&#111;&#117;&#x79;&#x61;&#x6e;&#x67;&#46;&#x77;&#104;&#x40;&#x66;&#x6f;&#x78;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> </p>
+<p>You may send mail if there are any questions</p>
 ]]></content>
   </entry>
 </search>
