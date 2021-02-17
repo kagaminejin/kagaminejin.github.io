@@ -1,5 +1,6 @@
 ---
 title: Self-introduction of AmemiyaRuli
+about: about
 ---
 Master of a QQ chat bot- -雨宫琉璃 
 Project location @[雨宫琉璃](https://qm.qq.com/cgi-bin/qm/qr?k=2mL1YiLMzyu-eK2jnEemQSOMlGlbDUUS&noverify=0)
