@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用[github+hexo]建立个人博客 | 雨宮琉璃</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="此法优点- -可以更改自己的 blog 主题且完全看不出自己的 blog 的基站是什么由于大多数用户使用的都是 Windows 系统，所以先给出 Windows 的操作方法 #Menu： GitHub Pages &amp; Hexo 原理 准备：环境搭建注意事项环境搭建建立github账号及库安装Hexo安装HexoHexo初始化和本地预览部署Hexo到GitHub Pages绑定域名（可选）开">
+<meta property="og:type" content="website">
+<meta property="og:title" content="使用[github+hexo]建立个人博客">
+<meta property="og:url" content="https://kagaminejin.github.io/categories/%E4%BD%BF%E7%94%A8hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">
+<meta property="og:site_name" content="雨宮琉璃">
+<meta property="og:description" content="此法优点- -可以更改自己的 blog 主题且完全看不出自己的 blog 的基站是什么由于大多数用户使用的都是 Windows 系统，所以先给出 Windows 的操作方法 #Menu： GitHub Pages &amp; Hexo 原理 准备：环境搭建注意事项环境搭建建立github账号及库安装Hexo安装HexoHexo初始化和本地预览部署Hexo到GitHub Pages绑定域名（可选）开">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-25T15:01:55.468Z">
+<meta property="article:modified_time" content="2021-08-25T15:01:55.468Z">
+<meta property="article:author" content="kagamine">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="雨宮琉璃" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://file.qqtouxiang.com/nvsheng/2019-07-25/1b215b5c7e7864ebdcd2ab3efaa2f358.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://file.qqtouxiang.com/nvsheng/2019-07-25/1b215b5c7e7864ebdcd2ab3efaa2f358.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://file.qqtouxiang.com/nvsheng/2019-07-25/1b215b5c7e7864ebdcd2ab3efaa2f358.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/categories/%E4%BD%BF%E7%94%A8hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="article-date">
+  	<time datetime="2021-08-25T15:01:55.468Z" itemprop="datePublished">2021-08-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用[github+hexo]建立个人博客
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/categories/%E4%BD%BF%E7%94%A8hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="使用[github+hexo]建立个人博客">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>此法优点- -可以更改自己的 blog 主题且完全看不出自己的 blog 的基站是什么<br><a href="/">由于大多数用户使用的都是 Windows 系统，所以先给出 Windows 的操作方法</a></p>
+<p>#Menu： GitHub Pages &amp; Hexo 原理</p>
+<h2 id="准备：环境搭建"><a href="#准备：环境搭建" class="headerlink" title="准备：环境搭建"></a><a href="#C8">准备：环境搭建</a></h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><h3 id="建立github账号及库"><a href="#建立github账号及库" class="headerlink" title="建立github账号及库"></a>建立github账号及库</h3><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><a href="#C9">安装Hexo</a></h2><h3 id="安装Hexo-1"><a href="#安装Hexo-1" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><h3 id="Hexo初始化和本地预览"><a href="#Hexo初始化和本地预览" class="headerlink" title="Hexo初始化和本地预览"></a>Hexo初始化和本地预览</h3><h2 id="部署Hexo到GitHub-Pages"><a href="#部署Hexo到GitHub-Pages" class="headerlink" title="部署Hexo到GitHub Pages"></a><a href="#C10">部署Hexo到GitHub Pages</a></h2><h2 id="绑定域名（可选）"><a href="#绑定域名（可选）" class="headerlink" title="绑定域名（可选）"></a><a href="#C11">绑定域名（可选）</a></h2><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a><a href="#C12">开始使用</a></h2><h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><h3 id="网站设置"><a href="#网站设置" class="headerlink" title="网站设置"></a>网站设置</h3><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><h3 id="常用代码"><a href="#常用代码" class="headerlink" title="常用代码"></a>常用代码</h3><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a><a href="#C13">常见问题</a></h2><a id="more"></a>
+
+<p>以下是步骤简述</p>
+<h2 id="环境搭建-1"><a href="#环境搭建-1" class="headerlink" title="环境搭建"></a><a id="C8">环境搭建</a></h2><p>首先安装好必须的运行库，<a target="_blank" rel="noopener" href="https://gitforwindows.org/">git</a>、<a target="_blank" rel="noopener" href="https://www.npmjs.com/get-npm">npm&amp;node.js</a>, 然后在<a target="_blank" rel="noopener" href="https://github.com/">github</a> 上建立自己的账号<br>建立好自己的库（库名<a href="/">Repository name</a>注意为：github用户名.github.io；记得添加readme.md文件）<br><a href="/">建立好库之后，可以打开 setting ，可以看到 Github Pages 一栏，之后我们可以在 Custom domain 更改域名</a></p>
+<p>注意：库名一定要是文中所述格式，否则之后的访问会失效！</p>
+<h2 id="安装Hexo-2"><a href="#安装Hexo-2" class="headerlink" title="安装Hexo"></a><a id="C9">安装Hexo</a></h2><p>本地安装新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog .打开该文件夹，右键-&gt;Git Bash Here.在<a href="-">git</a>内使用<a href="/">npm</a>一键安装 Hexo 博客程序：<br><code>$ npm install -g hexo-cli</code><br> <a href="/">注意，可能界面会没有反应，因为下载速度非常缓慢！！！所以不需要担心，静静等待即可，如果过长时间无响应，请重新运行指令安装</a></p>
+<p>初始化并安装所需组件：<br><a href="/">打开刚才建立的 Hexo-Blog ，在文件管理器的地址栏（我的地址栏显示的是D:\hexo\kagaminejin\）输入 cmd ，然后回车，打开cmd命令</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
+<p>完成后依次输入下面命令，启动本地服务器进行预览：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s -p 5555   # 启动预览</span><br></pre></td></tr></table></figure>
+<p>访问<a target="_blank" rel="noopener" href="http://localhost:5555/">http://localhost:5555</a> ,出现 Hexo 默认页面,本地博客安装成功！</p>
+<h2 id="部署Hexo到GitHub-Pages-1"><a href="#部署Hexo到GitHub-Pages-1" class="headerlink" title="部署Hexo到GitHub Pages"></a><a id="C10">部署Hexo到GitHub Pages</a></h2><p>首先安装 hexo-deployer-git：<br><code>npm install hexo-deployer-git --save</code><br>然后修改 _ config.yml 文件末尾的 Deployment 部分,修改成如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名&#x2F;用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>之后的每一次更新都需要进行以下步骤<br><a href="/">更新完成后运行<br><code>hexo g</code><br>生成页面后<br><code>hexo d</code><br>将网站上传部署 GitHub Pages .</a><br>这时访问我们的 GitHub (域名 https://用户名.github.io )就可以看到 Hexo 网站了.</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a><a id="C11">绑定域名</a></h2><p>使用的是 GitHub 的子域名，即<a href="/">用户名.http://github.io </a>,我们可以为Hexo博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO .<br>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码<a href="/">okoff</a>,优惠1$, .com 域名大概 50 块一年,在国内大概55r一年(阿里云什么的).</p>
+<h2 id="开始使用-1"><a href="#开始使用-1" class="headerlink" title="开始使用"></a><a id="C12">开始使用</a></h2><p>进入博客所在目录，右键打开 Git Bash Here ,创建博文：<br><code>hexo new &quot;My New Post&quot;</code><br>然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了.<br>也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式<a href="/">Front-matter</a>即可，同上写完后运行<code>hexo g</code>和<code>hexo d</code>发布</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World # 标题</span><br><span class="line">date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间</span><br><span class="line">categories: # 分类</span><br><span class="line">- Diary</span><br><span class="line">tags: # 标签</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
+<p>网站设置包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _ config.yml 文件中，参考官方文档按需要编辑.<br>（注意：冒号后要加一个空格!）<br>更换主题在<a href="www.hexo.io/themes">Hexo主题站</a>选择一个喜欢的主题，比如 NexT ，进入网站目录打开 Github 下载主题到本地，将其移动到<a href="/">E:\hexo\kagaminejin\themes</a>,<br>然后修改 _ config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _ config.yml 替换为主题自带的，参考主题的文件夹名.）</p>
+<p>常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;name&quot;       # 新建文章</span><br><span class="line">hexo new page &quot;name&quot;  # 新建页面</span><br><span class="line">hexo g                # 生成页面</span><br><span class="line">hexo d                # 部署</span><br><span class="line">hexo g -d             # 生成页面并部署</span><br><span class="line">hexo s                # 本地预览</span><br><span class="line">hexo clean            # 清除缓存和已生成的静态文件</span><br><span class="line">hexo help             # 帮助</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题-1"><a href="#常见问题-1" class="headerlink" title="常见问题"></a><a id="C13">常见问题</a></h2><p>可能你会发现你的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/rss/24470">Rss</a>没有使用过（<del>最好没有</del>）可以参考我在制作过程中看到的修正方法：<br>“因为在2020年10月1日起, GitHub 默认主分支从 master 更名为 main ，以上的提交方式会默认创建一个 master 分支<br>为保持一致性，可将本地 git init 的时候默认分支修改为 main .<br>执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git --version  查看版本</span><br><span class="line">git config --global init.defaultBranch main</span><br></pre></td></tr></table></figure>
+<p>git 分支在2.28.0上,重新设置默认分支为 main<br>最后修改 deploy 那里的 branch ：将 master 改为 main ,<br>此方法用于解决本地搭好了主题，在 GitHub 上却没有变化的问题，亲测有效.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="" data-title="使用[github+hexo]建立个人博客" data-url="https://kagaminejin.github.io/categories/%E4%BD%BF%E7%94%A8hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"  data-images="https://file.qqtouxiang.com/nvsheng/2019-07-25/1b215b5c7e7864ebdcd2ab3efaa2f358.jpg" data-content="使用[github+hexo]建立个人博客">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2021 kagamine
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
